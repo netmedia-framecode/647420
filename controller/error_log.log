@@ -1,0 +1,305 @@
+[2024-06-21 02:07:13] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\waktu-absensi.php on line 31
+[2024-06-21 02:07:13] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\waktu-absensi.php on line 31
+[2024-06-21 02:07:17] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\waktu-absensi.php on line 31
+[2024-06-21 02:07:17] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\waktu-absensi.php on line 31
+[2024-06-21 05:03:19] Error [8]: Undefined variable: views_waktu_absensi in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 11
+[2024-06-21 05:03:19] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 11
+[2024-06-21 05:03:19] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 35
+[2024-06-21 05:03:19] Error [8]: Undefined variable: views_waktu_absensi in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 81
+[2024-06-21 05:03:19] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 81
+[2024-06-21 06:33:31] Error [8]: Undefined variable: views_waktu_absensi in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 11
+[2024-06-21 06:33:31] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 11
+[2024-06-21 06:33:31] Error [8]: Undefined variable: views_waktu_absensi in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 16
+[2024-06-21 06:33:31] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 16
+[2024-06-21 06:33:44] Error [8]: Undefined variable: views_waktu_absensi in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 11
+[2024-06-21 06:33:44] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 11
+[2024-06-21 06:33:44] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 16
+[2024-06-21 06:33:46] Error [8]: Undefined variable: views_waktu_absensi in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 11
+[2024-06-21 06:33:46] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 11
+[2024-06-21 06:33:46] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 16
+[2024-06-21 06:34:06] Error [8]: Undefined variable: views_waktu_absensi in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 11
+[2024-06-21 06:34:06] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 11
+[2024-06-21 06:34:09] Error [8]: Undefined variable: views_waktu_absensi in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 11
+[2024-06-21 06:34:09] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\radius-absen.php on line 11
+[2024-06-21 07:14:17] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\absensi.php on line 31
+[2024-06-21 07:14:17] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\absensi.php on line 31
+[2024-06-21 07:31:40] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 44
+[2024-06-21 07:31:40] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 45
+[2024-06-21 07:31:40] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 76
+[2024-06-21 07:31:40] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 76
+[2024-06-21 07:31:40] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 87
+[2024-06-21 07:31:40] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 87
+[2024-06-21 07:31:40] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 44
+[2024-06-21 07:31:40] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 45
+[2024-06-21 07:31:40] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 76
+[2024-06-21 07:31:40] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 76
+[2024-06-21 07:31:40] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 87
+[2024-06-21 07:31:40] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 87
+[2024-06-21 07:31:40] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 164
+[2024-06-21 07:31:40] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 164
+[2024-06-21 07:31:40] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 173
+[2024-06-21 07:31:40] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 173
+[2024-06-21 07:34:59] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 50
+[2024-06-21 07:34:59] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 51
+[2024-06-21 07:34:59] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 82
+[2024-06-21 07:34:59] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 82
+[2024-06-21 07:34:59] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 93
+[2024-06-21 07:34:59] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 93
+[2024-06-21 07:34:59] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 50
+[2024-06-21 07:34:59] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 51
+[2024-06-21 07:34:59] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 82
+[2024-06-21 07:34:59] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 82
+[2024-06-21 07:34:59] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 93
+[2024-06-21 07:34:59] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 93
+[2024-06-21 07:34:59] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 170
+[2024-06-21 07:34:59] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 170
+[2024-06-21 07:34:59] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 179
+[2024-06-21 07:34:59] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 179
+[2024-06-21 07:35:19] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 50
+[2024-06-21 07:35:19] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 51
+[2024-06-21 07:35:19] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 82
+[2024-06-21 07:35:19] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 82
+[2024-06-21 07:35:19] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 93
+[2024-06-21 07:35:19] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 93
+[2024-06-21 07:35:19] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 50
+[2024-06-21 07:35:19] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 51
+[2024-06-21 07:35:19] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 82
+[2024-06-21 07:35:19] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 82
+[2024-06-21 07:35:19] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 93
+[2024-06-21 07:35:19] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 93
+[2024-06-21 07:35:19] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 170
+[2024-06-21 07:35:19] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 170
+[2024-06-21 07:35:19] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 179
+[2024-06-21 07:35:19] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 179
+[2024-06-21 07:35:51] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 50
+[2024-06-21 07:35:51] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 51
+[2024-06-21 07:35:51] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 82
+[2024-06-21 07:35:51] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 82
+[2024-06-21 07:35:51] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 93
+[2024-06-21 07:35:51] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 93
+[2024-06-21 07:35:51] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 50
+[2024-06-21 07:35:51] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 51
+[2024-06-21 07:35:51] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 82
+[2024-06-21 07:35:51] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 82
+[2024-06-21 07:35:51] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 93
+[2024-06-21 07:35:51] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 93
+[2024-06-21 07:35:51] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 170
+[2024-06-21 07:35:51] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 170
+[2024-06-21 07:35:51] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 179
+[2024-06-21 07:35:51] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 179
+[2024-06-21 07:37:24] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 42
+[2024-06-21 07:37:24] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 43
+[2024-06-21 07:37:24] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 74
+[2024-06-21 07:37:24] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 74
+[2024-06-21 07:37:24] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 85
+[2024-06-21 07:37:24] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 85
+[2024-06-21 07:37:24] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 42
+[2024-06-21 07:37:24] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 43
+[2024-06-21 07:37:24] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 74
+[2024-06-21 07:37:24] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 74
+[2024-06-21 07:37:24] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 85
+[2024-06-21 07:37:24] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 85
+[2024-06-21 07:37:24] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 162
+[2024-06-21 07:37:24] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 162
+[2024-06-21 07:37:24] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 171
+[2024-06-21 07:37:24] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 171
+[2024-06-21 07:37:38] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 42
+[2024-06-21 07:37:38] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 43
+[2024-06-21 07:37:38] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 74
+[2024-06-21 07:37:38] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 74
+[2024-06-21 07:37:38] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 85
+[2024-06-21 07:37:38] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 85
+[2024-06-21 07:37:38] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 42
+[2024-06-21 07:37:38] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 43
+[2024-06-21 07:37:38] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 74
+[2024-06-21 07:37:38] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 74
+[2024-06-21 07:37:38] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 85
+[2024-06-21 07:37:38] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 85
+[2024-06-21 07:37:38] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 162
+[2024-06-21 07:37:38] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 162
+[2024-06-21 07:37:38] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 171
+[2024-06-21 07:37:38] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 171
+[2024-06-21 07:38:35] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 45
+[2024-06-21 07:38:35] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 46
+[2024-06-21 07:38:35] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 77
+[2024-06-21 07:38:35] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 77
+[2024-06-21 07:38:35] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 88
+[2024-06-21 07:38:35] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 88
+[2024-06-21 07:38:35] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 45
+[2024-06-21 07:38:35] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 46
+[2024-06-21 07:38:35] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 77
+[2024-06-21 07:38:35] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 77
+[2024-06-21 07:38:35] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 88
+[2024-06-21 07:38:35] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 88
+[2024-06-21 07:38:35] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 165
+[2024-06-21 07:38:35] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 165
+[2024-06-21 07:38:35] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 174
+[2024-06-21 07:38:35] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 174
+[2024-06-21 07:39:12] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 55
+[2024-06-21 07:39:12] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 56
+[2024-06-21 07:39:12] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 87
+[2024-06-21 07:39:12] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 87
+[2024-06-21 07:39:12] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 98
+[2024-06-21 07:39:12] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 98
+[2024-06-21 07:39:12] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 55
+[2024-06-21 07:39:12] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 56
+[2024-06-21 07:39:12] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 87
+[2024-06-21 07:39:12] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 87
+[2024-06-21 07:39:12] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 98
+[2024-06-21 07:39:12] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 98
+[2024-06-21 07:39:12] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 175
+[2024-06-21 07:39:12] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 175
+[2024-06-21 07:39:12] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 184
+[2024-06-21 07:39:12] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 184
+[2024-06-21 07:39:33] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 51
+[2024-06-21 07:39:33] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 52
+[2024-06-21 07:39:33] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 83
+[2024-06-21 07:39:33] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 83
+[2024-06-21 07:39:33] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 94
+[2024-06-21 07:39:33] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 94
+[2024-06-21 07:39:33] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 51
+[2024-06-21 07:39:33] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 52
+[2024-06-21 07:39:33] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 83
+[2024-06-21 07:39:33] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 83
+[2024-06-21 07:39:33] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 94
+[2024-06-21 07:39:33] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 94
+[2024-06-21 07:39:33] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 171
+[2024-06-21 07:39:33] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 171
+[2024-06-21 07:39:33] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 180
+[2024-06-21 07:39:33] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 180
+[2024-06-21 07:43:25] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 59
+[2024-06-21 07:43:25] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 60
+[2024-06-21 07:43:25] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 91
+[2024-06-21 07:43:25] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 91
+[2024-06-21 07:43:25] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 102
+[2024-06-21 07:43:25] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 102
+[2024-06-21 07:43:25] Error [8]: Undefined index: nama_pangkat in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 59
+[2024-06-21 07:43:25] Error [8]: Undefined index: nama_jabatan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 60
+[2024-06-21 07:43:25] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 91
+[2024-06-21 07:43:25] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 91
+[2024-06-21 07:43:25] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 102
+[2024-06-21 07:43:25] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 102
+[2024-06-21 07:43:25] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 179
+[2024-06-21 07:43:25] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 179
+[2024-06-21 07:43:25] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 188
+[2024-06-21 07:43:25] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 188
+[2024-06-21 07:44:56] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 179
+[2024-06-21 07:44:56] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 179
+[2024-06-21 07:44:56] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 188
+[2024-06-21 07:44:56] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 188
+[2024-06-21 07:45:02] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 179
+[2024-06-21 07:45:02] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 179
+[2024-06-21 07:45:02] Error [8]: Undefined variable: views_jabatan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 188
+[2024-06-21 07:45:02] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 188
+[2024-06-21 08:05:35] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 71
+[2024-06-21 08:05:36] Error [8]: Undefined index: id_tpp in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 187
+[2024-06-21 08:05:36] Error [8]: Undefined index: id_tpp in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 187
+[2024-06-21 08:18:30] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 71
+[2024-06-21 08:18:30] Error [8]: Undefined index: id_tpp in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 286
+[2024-06-21 08:18:30] Error [8]: Undefined index: id_tpp in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 286
+[2024-06-21 08:18:54] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 71
+[2024-06-21 08:18:54] Error [8]: Undefined index: id_tpp in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 286
+[2024-06-21 08:18:54] Error [8]: Undefined index: id_tpp in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 286
+[2024-06-21 08:19:28] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 71
+[2024-06-21 08:19:30] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 71
+[2024-06-21 08:20:35] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 71
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 292
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 292
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 296
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 296
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 303
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 303
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 310
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 310
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 316
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 316
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 322
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 322
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 330
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 330
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 337
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 337
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 344
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 344
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 349
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 349
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 355
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 355
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 359
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 359
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 363
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 363
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 367
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 367
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 371
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 371
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 375
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 375
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 379
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 379
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 383
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 383
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 387
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 387
+[2024-06-21 08:22:13] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 391
+[2024-06-21 08:22:13] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 391
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 292
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 292
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 296
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 296
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 303
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 303
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 310
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 310
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 316
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 316
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 322
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 322
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 330
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 330
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 337
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 337
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 344
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 344
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 349
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 349
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 355
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 355
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 359
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 359
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 363
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 363
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 367
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 367
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 371
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 371
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 375
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 375
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 379
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 379
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 383
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 383
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 387
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 387
+[2024-06-21 08:23:46] Error [8]: Undefined variable: data in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 391
+[2024-06-21 08:23:46] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\daftar-tpp.php on line 391
+[2024-06-21 09:24:09] Error [8]: Undefined variable: count_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 21
+[2024-06-21 09:24:09] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 21
+[2024-06-21 09:24:09] Error [8]: Undefined variable: count_absensi in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 38
+[2024-06-21 09:24:09] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 38
+[2024-06-21 09:27:26] Error [8]: Undefined variable: views_absensi in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 87
+[2024-06-21 09:27:26] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 87
+[2024-06-21 09:29:41] Error [8]: Undefined variable: views_absensi in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 87
+[2024-06-21 09:29:41] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 87
+[2024-06-21 09:41:56] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
+[2024-06-21 09:42:04] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
+[2024-06-21 09:42:40] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
+[2024-06-21 09:43:35] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
+[2024-06-21 09:43:42] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
+[2024-06-21 09:44:41] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
+[2024-06-21 09:44:47] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
+[2024-06-21 09:44:50] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
+[2024-06-21 09:44:52] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
+[2024-06-21 09:45:15] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
+[2024-06-21 09:45:53] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
+[2024-06-21 09:45:55] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
