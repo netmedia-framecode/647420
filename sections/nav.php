@@ -11,7 +11,6 @@
           <div class="uk-navbar-item uk-visible@m">
             <div class="in-optional-nav">
               <a href="auth/" class="uk-button uk-button-text"><i class="fas fa-user-circle uk-margin-small-right"></i>Log in</a>
-              <a href="auth/register" class="uk-button uk-button-primary uk-button-small uk-border-pill">Sign up</a>
             </div>
           </div>
         </div>

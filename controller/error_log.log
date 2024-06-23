@@ -303,3 +303,87 @@
 [2024-06-21 09:45:15] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
 [2024-06-21 09:45:53] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
 [2024-06-21 09:45:55] Error [8]: Trying to access array offset on value of type null in E:\laragon\www\apps\tugas\penggajian_pegawai\views\index.php on line 150
+[2024-06-23 13:15:30] Error [8]: Undefined variable: views_pangkat_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\golongan-pegawai.php on line 30
+[2024-06-23 13:15:30] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\golongan-pegawai.php on line 30
+[2024-06-23 19:51:55] Error [8]: Undefined variable: views_tunjangan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 29
+[2024-06-23 19:51:55] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 29
+[2024-06-23 19:51:55] Error [8]: Undefined variable: views_tunjangan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 44
+[2024-06-23 19:51:55] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 44
+[2024-06-23 19:52:26] Error [8]: Undefined variable: views_tunjangan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 29
+[2024-06-23 19:52:26] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 29
+[2024-06-23 19:52:26] Error [8]: Undefined variable: views_tunjangan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 37
+[2024-06-23 19:52:26] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 37
+[2024-06-23 19:53:48] Error [8]: Undefined variable: views_tunjangan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 29
+[2024-06-23 19:53:48] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 29
+[2024-06-23 19:53:51] Error [8]: Undefined variable: views_tunjangan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 29
+[2024-06-23 19:53:51] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 29
+[2024-06-23 20:15:15] Error [8]: Undefined index: upah_golongan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 138
+[2024-06-23 20:15:15] Error [8]: Undefined index: upah_golongan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 138
+[2024-06-23 20:25:43] Error [8]: Undefined index: upah_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 52
+[2024-06-23 20:25:44] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 54
+[2024-06-23 20:25:44] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 57
+[2024-06-23 20:25:44] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 61
+[2024-06-23 20:25:44] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 67
+[2024-06-23 20:25:44] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 68
+[2024-06-23 20:25:44] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 72
+[2024-06-23 20:25:44] Error [8]: Undefined index: upah_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 76
+[2024-06-23 20:25:44] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 87
+[2024-06-23 20:25:44] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 90
+[2024-06-23 20:25:44] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 94
+[2024-06-23 20:25:44] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 100
+[2024-06-23 20:25:44] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 101
+[2024-06-23 20:32:06] Error [8]: Undefined index: upah_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 52
+[2024-06-23 20:32:06] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 54
+[2024-06-23 20:32:06] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 57
+[2024-06-23 20:32:06] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 61
+[2024-06-23 20:32:06] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 67
+[2024-06-23 20:32:06] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 68
+[2024-06-23 20:32:06] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 72
+[2024-06-23 20:32:06] Error [8]: Undefined index: upah_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 76
+[2024-06-23 20:32:06] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 87
+[2024-06-23 20:32:06] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 90
+[2024-06-23 20:32:06] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 94
+[2024-06-23 20:32:06] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 100
+[2024-06-23 20:32:06] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 101
+[2024-06-23 20:33:00] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 53
+[2024-06-23 20:33:00] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 56
+[2024-06-23 20:33:00] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 60
+[2024-06-23 20:33:00] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 66
+[2024-06-23 20:33:00] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 67
+[2024-06-23 20:33:00] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 71
+[2024-06-23 20:33:00] Error [8]: Undefined index: upah_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 75
+[2024-06-23 20:33:00] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 86
+[2024-06-23 20:33:00] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 89
+[2024-06-23 20:33:00] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 93
+[2024-06-23 20:33:00] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 99
+[2024-06-23 20:33:00] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 100
+[2024-06-23 20:33:09] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 53
+[2024-06-23 20:33:09] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 56
+[2024-06-23 20:33:09] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 60
+[2024-06-23 20:33:09] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 66
+[2024-06-23 20:33:09] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 67
+[2024-06-23 20:33:09] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 71
+[2024-06-23 20:33:09] Error [8]: Undefined index: upah_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 75
+[2024-06-23 20:33:09] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 86
+[2024-06-23 20:33:09] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 89
+[2024-06-23 20:33:09] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 93
+[2024-06-23 20:33:09] Error [8]: Undefined index: id_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 99
+[2024-06-23 20:33:09] Error [8]: Undefined index: nama_tunjangan in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 100
+[2024-06-23 20:48:06] Error [8]: Undefined variable: count_tunj in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 24
+[2024-06-23 20:48:06] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 24
+[2024-06-23 20:48:06] Error [8]: Undefined variable: views_tunjangan_pegawai in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 31
+[2024-06-23 20:48:06] Error [2]: mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 31
+[2024-06-23 20:48:06] Error [8]: Undefined variable: views_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 39
+[2024-06-23 20:48:06] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 39
+[2024-06-23 20:48:39] Error [8]: Undefined variable: views_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 26
+[2024-06-23 20:48:39] Error [2]: Invalid argument supplied for foreach() in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 26
+[2024-06-23 21:10:25] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 38
+[2024-06-23 21:10:25] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 44
+[2024-06-23 21:10:25] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 38
+[2024-06-23 21:10:25] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 44
+[2024-06-23 21:26:42] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 38
+[2024-06-23 21:26:42] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 38
+[2024-06-23 21:26:48] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 38
+[2024-06-23 21:26:48] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 38
+[2024-06-23 21:27:39] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 38
+[2024-06-23 21:27:39] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 38

@@ -31,94 +31,35 @@ require_once("templates/top.php"); ?>
 <!-- slideshow content end -->
 
 <!-- section content begin -->
-<div class="uk-section uk-section-muted uk-background-contain uk-background-center in-wave-3" style="background-image: url(img/in-wave-background-1.png);" data-uk-parallax="bgy: -200">
+<div class="uk-section uk-section-muted uk-background-contain uk-background-center in-wave-3" style="background-image: url(assets/img/in-wave-background-1.png);" data-uk-parallax="bgy: -200">
   <div class="uk-container">
     <div class="uk-grid-large uk-flex uk-flex-middle" data-uk-grid>
-      <div class="uk-width-1-2@m" style="width: 100%;">
-        <h1 class="uk-margin-remove">Daftar <span class="in-highlight">TPP</span></h1>
-        <div class="uk-grid-medium uk-text-center uk-margin-medium-top" data-uk-grid>
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-          <div class="table-responsive" style="width: 100%;">
-            <table class="table table-bordered text-dark" id="dataTable" width="100%" cellspacing="0">
-              <thead>
-                <tr>
-                  <th class="text-center" rowspan="4">Nama Pejabat / Pegawai</th>
-                  <th class="text-center" rowspan="4">Jabatan</th>
-                  <th class="text-center" rowspan="4">Kelas Jabatan</th>
-                  <th class="text-center" rowspan="4">Besaran TPP</th>
-                  <th class="text-center" colspan="4">Komponen Produktifitas Kerja</th>
-                  <th class="text-center" colspan="4">Komponen Disiplin Kerja</th>
-                  <th class="text-center">Jumlah TPP</th>
-                  <th class="text-center" colspan="8">Komponen Pengurangan Aspek</th>
-                  <th class="text-center">Jumlah TPP</th>
-                  <th class="text-center" rowspan="4">Pasal 21</th>
-                  <th class="text-center" rowspan="4">Jumlah TPP Setelah Pajak (Rp)</th>
-                </tr>
-                <tr>
-                  <th class="text-center" rowspan="3">Besaran (Rp)</th>
-                  <th class="text-center" colspan="2">Pengurangan (Rp)</th>
-                  <th class="text-center" rowspan="3">Jumlah (Rp)</th>
-                  <th class="text-center" rowspan="3">Besaran (Rp)</th>
-                  <th class="text-center" colspan="2">Pengurangan (Rp)</th>
-                  <th class="text-center" rowspan="3">Jumlah (Rp)</th>
-                  <th class="text-center">Sblm Pengurangan</th>
-                  <th class="text-center" colspan="2">Laporan Gratifikasi</th>
-                  <th class="text-center" colspan="2">Ketepatan Waktu</th>
-                  <th class="text-center" colspan="2">TPTGR</th>
-                  <th class="text-center" colspan="2">JHKPN</th>
-                  <th class="text-center">Sebelum Pajak</th>
-                </tr>
-                <tr>
-                  <th class="text-center" rowspan="2">Persen</th>
-                  <th class="text-center" rowspan="2">Nilai</th>
-                  <th class="text-center" rowspan="2">Persen</th>
-                  <th class="text-center" rowspan="2">Nilai</th>
-                  <th class="text-center" rowspan="2">Aspek Lainnya</th>
-                  <th class="text-center" rowspan="2">Persen</th>
-                  <th class="text-center" rowspan="2">Nilai</th>
-                  <th class="text-center" colspan="2">Pengembalian</th>
-                  <th class="text-center" rowspan="2">Persen</th>
-                  <th class="text-center" rowspan="2">Nilai</th>
-                  <th class="text-center" rowspan="2">Persen</th>
-                  <th class="text-center" rowspan="2">Nilai</th>
-                  <th class="text-center" rowspan="2">PPh</th>
-                </tr>
-                <tr>
-                  <th class="text-center">Persen</th>
-                  <th class="text-center">Nilai</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php foreach ($views_tpp as $data) { ?>
-                  <tr>
-                    <td><?= $data['nama'] ?></td>
-                    <td><?= $data['nama_jabatan'] ?></td>
-                    <td><?= $data['kelas_jabatan'] ?></td>
-                    <td>Rp.<?= number_format($data['besaran_tpp_kpk']) ?></td>
-                    <td>Rp.<?= number_format($data['besaran_kpk']) ?></td>
-                    <td><?= $data['persen_kpk'] ?>%</td>
-                    <td>Rp.<?= $data['nilai_kpk'] ?></td>
-                    <td>Rp.<?= number_format($data['jumlah_kpk']) ?></td>
-                    <td>Rp.<?= number_format($data['besaran_kdk']) ?></td>
-                    <td><?= $data['persen_kdk'] ?>%</td>
-                    <td>Rp.<?= number_format($data['nilai_kdk']) ?></td>
-                    <td>Rp.<?= number_format($data['jumlah_kdk']) ?></td>
-                    <td>Rp.<?= number_format($data['jumlah_tpp_sblm_kpal']) ?></td>
-                    <td><?= $data['persen_lap_gratifikasi'] ?>%</td>
-                    <td>Rp.<?= number_format($data['nilai_lap_gratifikasi']) ?></td>
-                    <td><?= $data['persen_pengembalian_bmd'] ?>%</td>
-                    <td>Rp.<?= number_format($data['nilai_pengembalian_bmd']) ?></td>
-                    <td><?= $data['persen_tptgr'] ?>%</td>
-                    <td>Rp.<?= number_format($data['nilai_tptgr']) ?></td>
-                    <td><?= $data['persen_jhkpn'] ?>%</td>
-                    <td>Rp.<?= number_format($data['nilai_jhkpn']) ?></td>
-                    <td>Rp.<?= number_format($data['jumlah_tpp_sblm_pajak']) ?></td>
-                    <td>Rp.<?= number_format($data['pasal_21']) ?></td>
-                    <td>Rp.<?= number_format($data['jumlah_tpp_setelah_pajak']) ?></td>
-                  </tr>
-                <?php } ?>
-              </tbody>
-            </table>
+      <div class="uk-width-1-2@m">
+        <h1 class="uk-margin-remove">Tentang <span class="in-highlight">Kecamatan Koting</span></h1>
+        <p>Koting adalah sebuah kecamatan di kabupaten Sikka, Nusa Tenggara Timur, Indonesia. Kecamatan ini berjarak sekitar 12 kilometer dari ibu kota kabupaten Sikka ke arah selatan. Pusat pemerintahannya berada di Desa Koting B.</p>
+        <p>Kecamatan Koting merupakan salah satu lembaga pemerintahan yang membantu Kabupaten Sikka dalam menunjang data administrasi pemerintahan. Untuk itu, peran dan kinerja pegawai dalam mengelola data-data administrasi pada kantor Kecamatan Koting sangatlah dibutuhkan.</p>
+        <p>Nama Camat : Yohanes Hali Beguir, S.Fil</p>
+        <p style="margin-top: -15px;">Populasi : 6,819 jiwa (BPS 2,017) jiwa</p>
+        <p style="margin-top: -15px;">Kode Kemendagri : 53.07.16</p>
+        <p style="margin-top: -15px;">Luas daerah : 23,56 km2</p>
+        <p style="margin-top: -15px;">Kecamatan : Kec. Koting</p>
+        <p style="margin-top: -15px;">Kabupaten/Kota : Sikka</p>
+        <p style="margin-top: -15px;">Provinsi : Nusa Tenggara Timur</p>
+        <p style="margin-top: -15px;">Kode PBS : 5310062</p>
+      </div>
+      <div class="uk-width-1-2@m">
+        <div class="uk-inline uk-dark in-wave-video uk-margin-small-bottom">
+          <img class="uk-border-rounded uk-width-1-1" src="assets/img/thumbnail.jpg" data-src="assets/img/thumbnail.jpg" alt="wave-video" width="533" height="355" data-uk-img>
+          <div class="uk-position-center" data-uk-lightbox="video-autoplay: true;">
+            <a href="https://www.youtube.com/watch?v=MMPSoe_FM4c" data-attrs="width: 920; height: 517;">
+              <div class="in-play-button"></div>
+              <i class="fas fa-play"></i>
+            </a>
+          </div>
+          <div class="uk-flex-top" data-uk-modal>
+            <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical in-iframe">
+              <button class="uk-modal-close-outside" type="button" data-uk-close></button>
+            </div>
           </div>
         </div>
       </div>
@@ -126,5 +67,72 @@ require_once("templates/top.php"); ?>
   </div>
 </div>
 <!-- section content end -->
+
+
+<!-- blog content begin -->
+<div class="uk-section uk-margin-small-top">
+  <div class="uk-container">
+    <h1>Kegiatan</h1>
+    <div class="uk-grid" data-uk-grid>
+      <div class="uk-width-1-3@m">
+        <div class="in-blog-1" data-uk-grid>
+          <div class="in-stretch">
+            <article class="uk-card uk-card-default uk-border-rounded">
+              <div class="uk-card-media-top">
+                <img src="assets/img/k1.jpeg" style="width: 100%; height: 350px; object-fit: cover;" alt="Kegiatan musrenbang RKPDES tingkat kecamatan koting tahun 2024">
+              </div>
+              <div class="uk-card-body">
+                <h3>Kegiatan musrenbang RKPDES tingkat kecamatan koting tahun 2024</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="uk-width-1-3@m">
+        <div class="in-blog-1" data-uk-grid>
+          <div class="in-stretch">
+            <article class="uk-card uk-card-default uk-border-rounded">
+              <div class="uk-card-media-top">
+                <img src="assets/img/k2.jpeg" style="width: 100%; height: 350px; object-fit: cover;" alt="Penyerahan BLT oleh pemerintah kabupaten sikka kepada masyarakat di desa koting D">
+              </div>
+              <div class="uk-card-body">
+                <h3>Penyerahan BLT oleh pemerintah kabupaten sikka kepada masyarakat di desa koting D</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="uk-width-1-3@m">
+        <div class="in-blog-1" data-uk-grid>
+          <div class="in-stretch">
+            <article class="uk-card uk-card-default uk-border-rounded">
+              <div class="uk-card-media-top">
+                <img src="assets/img/k3.jpeg" style="width: 100%; height: 350px; object-fit: cover;" alt="Pelaksanaan vaksin di SDK koting A oleh dinas kesehatan kabupaten Sikka">
+              </div>
+              <div class="uk-card-body">
+                <h3>Pelaksanaan vaksin di SDK koting A oleh dinas kesehatan kabupaten Sikka</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="uk-width-1-3@m">
+        <div class="in-blog-1" data-uk-grid>
+          <div class="in-stretch">
+            <article class="uk-card uk-card-default uk-border-rounded">
+              <div class="uk-card-media-top">
+                <img src="assets/img/k4.jpeg" style="width: 100%; height: 350px; object-fit: cover;" alt="Penyerahan sertifikat Tanah pada masyarakat desa koting C oleh pejabat Bupati sikka">
+              </div>
+              <div class="uk-card-body">
+                <h3>Penyerahan sertifikat Tanah pada masyarakat desa koting C oleh pejabat Bupati sikka</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- blog content end -->
 
 <?php require_once("templates/bottom.php"); ?>

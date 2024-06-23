@@ -155,3 +155,32 @@ CREATE TABLE absensi(
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY (id_pegawai) REFERENCES pegawai(id_pegawai) ON UPDATE CASCADE ON DELETE NO ACTION
 );
+
+CREATE TABLE golongan_pegawai(
+  id_golongan INT AUTO_INCREMENT PRIMARY KEY,
+  nama_golongan VARCHAR(35),
+  upah_golongan CHAR(40)
+);
+
+CREATE TABLE tunjangan_pegawai(
+  id_tunjangan INT AUTO_INCREMENT PRIMARY KEY,
+  nama_tunjangan CHAR(40),
+  upah_tunjangan CHAR(40)
+);
+
+CREATE TABLE rekap_gaji(
+  id_rekap_gaji INT AUTO_INCREMENT PRIMARY KEY,
+  id_pegawai INT,
+  gaji CHAR(40),
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (id_pegawai) REFERENCES pegawai(id_pegawai) ON UPDATE CASCADE ON DELETE NO ACTION
+);
+
+CREATE TABLE rekap_gaji_tunj(
+  id_rekap_gaji_tunj INT AUTO_INCREMENT PRIMARY KEY,
+  id_rekap_gaji INT,
+  id_tunjangan INT,
+  FOREIGN KEY (id_rekap_gaji) REFERENCES rekap_gaji(id_rekap_gaji) ON UPDATE CASCADE ON DELETE CASCADE,
+  FOREIGN KEY (id_tunjangan) REFERENCES tunjangan_pegawai(id_tunjangan) ON UPDATE CASCADE ON DELETE NO ACTION
+);

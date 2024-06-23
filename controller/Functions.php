@@ -959,18 +959,29 @@ if (isset($_SESSION["project_penggajian_pegawai"]["users"])) {
   function pangkat_pegawai($conn, $data, $action)
   {
     if ($action == "insert") {
-      $sql = "INSERT INTO pangkat_pegawai(nama_pangkat) VALUES('$data[nama_pangkat]')";
+      $checkID = "SELECT * FROM pangkat_pegawai ORDER BY id_pangkat DESC LIMIT 1";
+      $checkID = mysqli_query($conn, $checkID);
+      if (mysqli_num_rows($checkID) > 0) {
+        $dataID = mysqli_fetch_assoc($checkID);
+        $id_pangkat = $dataID['id_pangkat'] + 1;
+      } else {
+        $id_pangkat = 1;
+      }
+      $sql = "INSERT INTO pangkat_pegawai(id_pangkat,nama_pangkat) VALUES('$id_pangkat','$data[nama_pangkat]');";
+      $sql .= "INSERT INTO golongan_pegawai(id_golongan,nama_golongan) VALUES('$id_pangkat','$data[nama_pangkat]');";
     }
 
     if ($action == "update") {
-      $sql = "UPDATE pangkat_pegawai SET nama_pangkat='$data[nama_pangkat]' WHERE id_pangkat='$data[id_pangkat]'";
+      $sql = "UPDATE pangkat_pegawai SET nama_pangkat='$data[nama_pangkat]' WHERE id_pangkat='$data[id_pangkat]';";
+      $sql .= "UPDATE golongan_pegawai SET nama_golongan='$data[nama_pangkat]' WHERE id_golongan='$data[id_pangkat]';";
     }
 
     if ($action == "delete") {
-      $sql = "DELETE FROM pangkat_pegawai WHERE id_pangkat='$data[id_pangkat]'";
+      $sql = "DELETE FROM pangkat_pegawai WHERE id_pangkat='$data[id_pangkat]';";
+      $sql .= "DELETE FROM golongan_pegawai WHERE id_golongan='$data[id_pangkat]';";
     }
 
-    mysqli_query($conn, $sql);
+    mysqli_multi_query($conn, $sql);
     return mysqli_affected_rows($conn);
   }
 
@@ -1549,6 +1560,149 @@ if (isset($_SESSION["project_penggajian_pegawai"]["users"])) {
     }
 
     mysqli_query($conn, $sql);
+    return mysqli_affected_rows($conn);
+  }
+
+  function golongan_pegawai($conn, $data, $action)
+  {
+    if ($action == "update") {
+      $sql = "UPDATE golongan_pegawai SET upah_golongan='$data[upah_golongan]' WHERE id_golongan='$data[id_golongan]';";
+    }
+
+    mysqli_query($conn, $sql);
+    return mysqli_affected_rows($conn);
+  }
+
+  function tunjangan_pegawai($conn, $data, $action)
+  {
+    if ($action == "insert") {
+      $sql = "INSERT INTO tunjangan_pegawai(nama_tunjangan,upah_tunjangan) VALUES('$data[nama_tunjangan]','$data[upah_tunjangan]')";
+    }
+
+    if ($action == "update") {
+      $sql = "UPDATE tunjangan_pegawai SET nama_tunjangan='$data[nama_tunjangan]', upah_tunjangan='$data[upah_tunjangan]' WHERE id_tunjangan='$data[id_tunjangan]'";
+    }
+
+    if ($action == "delete") {
+      $sql = "DELETE FROM tunjangan_pegawai WHERE id_tunjangan='$data[id_tunjangan]'";
+    }
+
+    mysqli_query($conn, $sql);
+    return mysqli_affected_rows($conn);
+  }
+
+  function rekap_gaji($conn, $data, $action)
+  {
+    if ($action == "insert") {
+      $checkID = "SELECT * FROM rekap_gaji ORDER BY id_rekap_gaji DESC LIMIT 1";
+      $checkID = mysqli_query($conn, $checkID);
+      if (mysqli_num_rows($checkID) > 0) {
+        $dataID = mysqli_fetch_assoc($checkID);
+        $id_rekap_gaji = $dataID['id_rekap_gaji'] + 1;
+      } else {
+        $id_rekap_gaji = 1;
+      }
+      $sql = "INSERT INTO rekap_gaji(id_rekap_gaji,id_pegawai,gaji) VALUES('$id_rekap_gaji','$data[id_pegawai]','$data[upah_golongan]')";
+      mysqli_query($conn, $sql);
+      if (!empty($data['id_tunjangan']) && is_array($data['id_tunjangan'])) {
+        $tunjangan = $data['id_tunjangan'];
+        foreach ($tunjangan as $id_tunjangan) {
+          $sql_tunjangan = "INSERT INTO rekap_gaji_tunj(id_rekap_gaji, id_tunjangan) VALUES('$id_rekap_gaji', '$id_tunjangan')";
+          mysqli_query($conn, $sql_tunjangan);
+        }
+      }
+    }
+
+    if ($action == "delete") {
+      $sql = "DELETE FROM rekap_gaji WHERE id_rekap_gaji='$data[id_rekap_gaji]'";
+      mysqli_query($conn, $sql);
+    }
+
+    return mysqli_affected_rows($conn);
+  }
+
+  function exportRekapGajiToPDF($conn, $id_rekap_gaji)
+  {
+    $query = "SELECT rekap_gaji.*, pegawai.nama, pegawai.nip, pangkat_pegawai.nama_pangkat, jabatan_pegawai.nama_jabatan 
+      FROM rekap_gaji 
+      JOIN pegawai ON rekap_gaji.id_pegawai = pegawai.id_pegawai
+      JOIN pangkat_pegawai ON pegawai.id_pangkat = pangkat_pegawai.id_pangkat
+      JOIN jabatan_pegawai ON pegawai.id_jabatan = jabatan_pegawai.id_jabatan
+      WHERE rekap_gaji.id_rekap_gaji = '$id_rekap_gaji'";
+    $result = mysqli_query($conn, $query);
+    $data = mysqli_fetch_assoc($result);
+    $mpdf = new \Mpdf\Mpdf();
+    $html = '<p style="text-align: center; text-decoration: underline;"><b>SURAT KETERANGAN PERINCIAN GAJI<b></p>';
+    $html .= '<p style="text-align: center;"><b>UNTUK BULAN ' . strtoupper(date('M Y')) . '<b></p>';
+    $html .= '<table style="border-collapse: collapse; width: 100%; margin: auto;">
+    <tbody>
+      <tr>
+        <td style="width: 150px; ">Nama</td>
+        <td style="width: 10px; ">:</td>
+        <td>' . $data['nama'] . '</td>
+      </tr>
+      <tr>
+        <td>NIP</td>
+        <td>:</td>
+        <td>' . $data['nip'] . '</td>
+      </tr>
+      <tr>
+        <td>Pangkat / Golongan</td>
+        <td>:</td>
+        <td>' . $data['nama_pangkat'] . '</td>
+      </tr>
+      <tr>
+        <td>Jabatan</td>
+        <td>:</td>
+        <td>' . $data['nama_jabatan'] . '</td>
+      </tr>
+    </tbody>
+    </table>';
+    $html .= '<p style="text-align: left;margin-top: 50px;"><b>PERINCIAN : <b></p>';
+    $html .= '<table style="border-collapse: collapse; width: 100%; margin: auto;">
+    <tbody>
+      <tr>
+        <td style="width: 250px; ">Gaji Pokok</td>
+        <td style="width: 10px; ">:</td>
+        <td>Rp.' . number_format($data['gaji']) . '</td>
+      </tr>';
+    $id_rekap_gaji = $data['id_rekap_gaji'];
+    $rekap_gaji_tunj = "SELECT * FROM rekap_gaji_tunj JOIN tunjangan_pegawai ON rekap_gaji_tunj.id_tunjangan=tunjangan_pegawai.id_tunjangan WHERE rekap_gaji_tunj.id_rekap_gaji='$id_rekap_gaji'";
+    $views_rekap_gaji_tunj = mysqli_query($conn, $rekap_gaji_tunj);
+    $total_tunjangan = 0;
+    if (mysqli_num_rows($views_rekap_gaji_tunj) > 0) {
+      while ($data_rgt = mysqli_fetch_assoc($views_rekap_gaji_tunj)) {
+        $html .= '<tr>
+        <td>' . $data_rgt['nama_tunjangan'] . '</td>
+        <td>:</td>
+        <td>Rp.' . number_format($data_rgt['upah_tunjangan']) . '</td>
+      </tr>';
+        $total_tunjangan += $data_rgt['upah_tunjangan'];
+      }
+    }
+    $jumlah = $total_tunjangan + $data['gaji'];
+    $html .= '<tr>
+        <th style="width: 250px; ">Jumlah</th>
+        <th style="width: 10px; ">:</th>
+        <th style="text-align: left;">Rp.' . number_format($jumlah) . '</th>
+      </tr></tbody>
+    </table>';
+    $html .= '<div style="width: 300px; margin-top: 20px; float: right; text-align: right;">
+      <p style="text-align: center;">Kec. Koting, ' . date("d M Y") . '</p>
+      <p style="text-align: center; padding-top: -15px;">Sekretariat</p>
+      <h4 style="padding-top: 50px; text-decoration: underline; text-align: center;"></h4>
+    </div>';
+    $mpdf->WriteHTML($html);
+    $mpdf->Output('rekap_gaji_' . $data['nama'] . '.pdf', 'D');
+  }
+
+  function cetak_gaji($conn, $data, $action)
+  {
+    if ($action == "unduh") {
+      $id_rekap_gaji = $data['id_rekap_gaji'];
+      exportRekapGajiToPDF($conn, $id_rekap_gaji);
+    }
+
     return mysqli_affected_rows($conn);
   }
 
