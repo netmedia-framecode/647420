@@ -148,16 +148,19 @@ require_once("../templates/views_top.php"); ?>
               </div>
               <div class="card-body">
                 <div class="time-display" id="timeDisplay"></div>
-                <form action="" method="post">
-                  <?php
-                  date_default_timezone_set('Asia/Makassar');
-                  $current_time = date('H:i:s');
-                  ?>
-                  <input type="hidden" name="id_pegawai" value="<?= $data_pegawai['id_pegawai'] ?>">
-                  <input type="hidden" name="waktu_masuk" value="<?= $current_time ?>">
-                  <input type="hidden" name="waktu_pulang" value="<?= $current_time ?>">
-                  <button type="submit" name="add" class="btn btn-primary btn-block" onclick="setWaktuAbsen()">Absen</button>
-                </form>
+                <?php if (mysqli_num_rows($take_pegawai)) {
+                  $data_pegawai = mysqli_fetch_assoc($take_pegawai); ?>
+                  <form action="" method="post">
+                    <?php
+                    date_default_timezone_set('Asia/Makassar');
+                    $current_time = date('H:i:s');
+                    ?>
+                    <input type="hidden" name="id_pegawai" value="<?= $data_pegawai['id_pegawai'] ?>">
+                    <input type="hidden" name="waktu_masuk" value="<?= $current_time ?>">
+                    <input type="hidden" name="waktu_pulang" value="<?= $current_time ?>">
+                    <button type="submit" name="add" class="btn btn-primary btn-block" onclick="setWaktuAbsen()">Absen</button>
+                  </form>
+                <?php } ?>
               </div>
             </div>
           </div>

@@ -22,7 +22,6 @@ $longitude = $data_geolocation->loc ? explode(',', $data_geolocation->loc)[1] : 
 
 $check_pegawai = "SELECT * FROM pegawai WHERE nama = '$name'";
 $take_pegawai = mysqli_query($conn, $check_pegawai);
-$data_pegawai = mysqli_fetch_assoc($take_pegawai);
 
 $pegawai = "SELECT pegawai.*, pangkat_pegawai.nama_pangkat, jabatan_pegawai.nama_jabatan 
   FROM pegawai 
