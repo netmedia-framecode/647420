@@ -48,6 +48,19 @@ if (!isset($_SESSION["project_penggajian_pegawai"]["rekap_gaji"])) {
   $html .= '<table style="border-collapse: collapse; width: 100%; margin: auto;">
   <tbody>
   <tr>
+    <th style="width: 250px; text-align: left;" colspan="3">Total Kehadiran</th>
+    <td style="width: 10px; ">:</td>
+    <td>Rp.' . $data['total_absensi'] . ' hari</td>
+  </tr>
+  <tr>
+    <th style="width: 250px; text-align: left;" colspan="3">Total Hari Kerja</th>
+    <td style="width: 10px; ">:</td>
+    <td>Rp.' . $data['total_hari_kerja'] . ' hari</td>
+  </tr>
+  <tr>
+    <th style="width: 250px; text-align: left;" colspan="3">Penghasilan :</th>
+  </tr>
+  <tr>
     <td style="width: 250px; ">Gaji Pokok</td>
     <td style="width: 10px; ">:</td>
     <td>Rp.' . number_format($data['gaji']) . '</td>
@@ -63,14 +76,40 @@ if (!isset($_SESSION["project_penggajian_pegawai"]["rekap_gaji"])) {
     <td>:</td>
     <td>Rp.' . number_format($data_rgt['upah_tunjangan']) . '</td>
   </tr>';
-      $total_tunjangan += $data_rgt['upah_tunjangan'];
     }
   }
-  $jumlah = $total_tunjangan + $data['gaji'];
   $html .= '<tr>
       <th style="width: 250px; ">Jumlah</th>
       <th style="width: 10px; ">:</th>
-      <th style="text-align: left;">Rp.' . number_format($jumlah) . '</th>
+      <th style="text-align: left;">Rp.' . number_format($data['jumlah_bruto']) . '</th>
+    </tr></tbody>
+  </table>';
+  $html .= '<table style="border-collapse: collapse; width: 100%; margin: auto;">
+  <tbody>
+  <tr>
+    <th style="width: 250px;text-align: left;" colspan="3">Potongan :</th>
+  </tr>';
+  $rekap_gaji_potongan = "SELECT * FROM rekap_gaji_potongan JOIN potongan_pegawai ON rekap_gaji_potongan.id_potongan=potongan_pegawai.id_potongan WHERE rekap_gaji_potongan.id_rekap_gaji='$id_rekap_gaji'";
+  $views_rekap_gaji_potongan = mysqli_query($conn, $rekap_gaji_potongan);
+  $total_potongan = 0;
+  if (mysqli_num_rows($views_rekap_gaji_potongan) > 0) {
+    while ($data_rgp = mysqli_fetch_assoc($views_rekap_gaji_potongan)) {
+      $html .= '<tr>
+    <td>' . $data_rgp['nama_potongan'] . '</td>
+    <td>:</td>
+    <td>Rp.' . number_format($data_rgp['upah_potongan']) . '</td>
+  </tr>';
+    }
+  }
+  $html .= '<tr>
+      <th style="width: 250px; ">Jumlah</th>
+      <th style="width: 10px; ">:</th>
+      <th style="text-align: left;">Rp.' . number_format($data['jumlah_potongan']) . '</th>
+    </tr>
+    <tr>
+      <th style="width: 250px; ">Jumlah yang Dibayarkan</th>
+      <th style="width: 10px; ">:</th>
+      <th style="text-align: left;">Rp.' . number_format($data['jumlah_dibayarkan']) . '</th>
     </tr></tbody>
   </table>';
   $html .= '<div style="width: 300px; margin-top: 20px; float: right; text-align: right;">

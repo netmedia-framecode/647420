@@ -172,6 +172,12 @@ CREATE TABLE rekap_gaji(
   id_rekap_gaji INT AUTO_INCREMENT PRIMARY KEY,
   id_pegawai INT,
   gaji CHAR(40),
+  total_absensi INT,
+  presentasi_absensi INT,
+  total_hari_kerja INT,
+  jumlah_bruto CHAR(40),
+  jumlah_potongan CHAR(40),
+  jumlah_dibayarkan CHAR(40),
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY (id_pegawai) REFERENCES pegawai(id_pegawai) ON UPDATE CASCADE ON DELETE NO ACTION
@@ -183,4 +189,19 @@ CREATE TABLE rekap_gaji_tunj(
   id_tunjangan INT,
   FOREIGN KEY (id_rekap_gaji) REFERENCES rekap_gaji(id_rekap_gaji) ON UPDATE CASCADE ON DELETE CASCADE,
   FOREIGN KEY (id_tunjangan) REFERENCES tunjangan_pegawai(id_tunjangan) ON UPDATE CASCADE ON DELETE NO ACTION
+);
+
+CREATE TABLE potongan_pegawai(
+  id_potongan INT AUTO_INCREMENT PRIMARY KEY,
+  nama_potongan CHAR(40),
+  upah_potongan CHAR(40)
+);
+
+CREATE TABLE rekap_gaji_potongan(
+  id_rekap_gaji_potongan INT AUTO_INCREMENT PRIMARY KEY,
+  id_rekap_gaji INT,
+  id_potongan INT,
+  upah_dipotong CHAR(40),
+  FOREIGN KEY (id_rekap_gaji) REFERENCES rekap_gaji(id_rekap_gaji) ON UPDATE CASCADE ON DELETE CASCADE,
+  FOREIGN KEY (id_potongan) REFERENCES potongan_pegawai(id_potongan) ON UPDATE CASCADE ON DELETE NO ACTION
 );

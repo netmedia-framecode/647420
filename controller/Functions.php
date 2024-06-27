@@ -1591,27 +1591,100 @@ if (isset($_SESSION["project_penggajian_pegawai"]["users"])) {
     return mysqli_affected_rows($conn);
   }
 
+  function hitungPendapatanBersih($gajiPokok, $tunjanganArray, $potonganArray, $totalKehadiran, $hariKerja)
+  {
+    $totalTunjangan = is_array($tunjanganArray) ? array_sum($tunjanganArray) : 0;
+    $totalPotongan = is_array($potonganArray) ? array_sum($potonganArray) : 0;
+    $absensi = ($totalKehadiran / $hariKerja) * 100;
+    $gajiPokokAbsensi = $gajiPokok * ($absensi / 100);
+    $pendapatanBersih = ($gajiPokokAbsensi + $totalTunjangan) - $totalPotongan;
+    return $pendapatanBersih;
+  }
+
+  function hitungHariKerja($bulan, $tahun)
+  {
+    $totalHari = cal_days_in_month(CAL_GREGORIAN, $bulan, $tahun);
+    $hariKerja = 0;
+    for ($i = 1; $i <= $totalHari; $i++) {
+      $tanggal = sprintf('%04d-%02d-%02d', $tahun, $bulan, $i);
+      $hariDalamMinggu = date('N', strtotime($tanggal));
+      if ($hariDalamMinggu < 6) {
+        $hariKerja++;
+      }
+    }
+    return $hariKerja;
+  }
+
   function rekap_gaji($conn, $data, $action)
   {
     if ($action == "insert") {
-      $checkID = "SELECT * FROM rekap_gaji ORDER BY id_rekap_gaji DESC LIMIT 1";
-      $checkID = mysqli_query($conn, $checkID);
-      if (mysqli_num_rows($checkID) > 0) {
-        $dataID = mysqli_fetch_assoc($checkID);
+      // Ambil ID terakhir dari rekap_gaji dan increment
+      $checkID = "SELECT id_rekap_gaji FROM rekap_gaji ORDER BY id_rekap_gaji DESC LIMIT 1";
+      $checkIDResult = mysqli_query($conn, $checkID);
+      if (mysqli_num_rows($checkIDResult) > 0) {
+        $dataID = mysqli_fetch_assoc($checkIDResult);
         $id_rekap_gaji = $dataID['id_rekap_gaji'] + 1;
       } else {
         $id_rekap_gaji = 1;
       }
-      $sql = "INSERT INTO rekap_gaji(id_rekap_gaji,id_pegawai,gaji) VALUES('$id_rekap_gaji','$data[id_pegawai]','$data[upah_golongan]')";
+
+      // Insert ke rekap_gaji
+      $sql = "INSERT INTO rekap_gaji(id_rekap_gaji, id_pegawai, gaji) VALUES('$id_rekap_gaji', '$data[id_pegawai]', '$data[upah_golongan]')";
       mysqli_query($conn, $sql);
+
+      // Proses tunjangan
+      $jumlah_bruto = 0;
       if (!empty($data['id_tunjangan']) && is_array($data['id_tunjangan'])) {
         $tunjangan = $data['id_tunjangan'];
         foreach ($tunjangan as $id_tunjangan) {
           $sql_tunjangan = "INSERT INTO rekap_gaji_tunj(id_rekap_gaji, id_tunjangan) VALUES('$id_rekap_gaji', '$id_tunjangan')";
           mysqli_query($conn, $sql_tunjangan);
         }
+
+        $upah_tunjangan = $data['upah_tunjangan'];
+        foreach ($upah_tunjangan as $upah) {
+          $jumlah_bruto += $upah;
+        }
       }
+
+      // Proses potongan
+      $jumlah_potongan = 0;
+      if (!empty($data['id_potongan']) && is_array($data['id_potongan']) && !empty($data['upah_potongan']) && is_array($data['upah_potongan'])) {
+        $potongan = $data['id_potongan'];
+        $upahPotongan = $data['upah_potongan'];
+
+        foreach ($potongan as $index => $id_potongan) {
+          // Pastikan indeks yang ada di kedua array adalah valid
+          if (isset($upahPotongan[$index])) {
+            $upah_dipotong = $upahPotongan[$index];
+
+            $sql_potongan = "INSERT INTO rekap_gaji_potongan(id_rekap_gaji, id_potongan, upah_dipotong) VALUES('$id_rekap_gaji', '$id_potongan', '$upah_dipotong')";
+            mysqli_query($conn, $sql_potongan);
+
+            $jumlah_potongan += $upah_dipotong;
+          }
+        }
+      }
+
+
+      // Hitung absensi
+      $bulanSaatIni = date('n');
+      $tahunSaatIni = date('Y');
+      $check_absensi = "SELECT * FROM absensi WHERE id_pegawai='$data[id_pegawai]' AND MONTH(created_at) = '$bulanSaatIni' AND YEAR(created_at) = '$tahunSaatIni'";
+      $view_absensi = mysqli_query($conn, $check_absensi);
+      $total_absensi = mysqli_num_rows($view_absensi);
+
+      $total_hari_kerja = hitungHariKerja($bulanSaatIni, $tahunSaatIni);
+      $presentasi_absensi = number_format(($total_absensi / $total_hari_kerja) * 100, 2);
+
+      // Hitung pendapatan bersih
+      $jumlah_dibayarkan = hitungPendapatanBersih($data['upah_golongan'], $jumlah_bruto, $jumlah_potongan, $total_absensi, $total_hari_kerja);
+
+      // Update rekap_gaji dengan informasi tambahan
+      $sql_update_rekap_gaji = "UPDATE rekap_gaji SET total_absensi='$total_absensi', presentasi_absensi='$presentasi_absensi', total_hari_kerja='$total_hari_kerja', jumlah_bruto='$jumlah_bruto', jumlah_potongan='$jumlah_potongan', jumlah_dibayarkan='$jumlah_dibayarkan' WHERE id_rekap_gaji='$id_rekap_gaji'";
+      mysqli_query($conn, $sql_update_rekap_gaji);
     }
+
 
     if ($action == "delete") {
       $sql = "DELETE FROM rekap_gaji WHERE id_rekap_gaji='$data[id_rekap_gaji]'";
@@ -1662,6 +1735,19 @@ if (isset($_SESSION["project_penggajian_pegawai"]["users"])) {
     $html .= '<table style="border-collapse: collapse; width: 100%; margin: auto;">
     <tbody>
       <tr>
+        <th style="width: 250px; text-align: left;">Total Kehadiran</th>
+        <td style="width: 10px; ">:</td>
+        <td>' . $data['total_absensi'] . ' hari</td>
+      </tr>
+      <tr>
+        <th style="width: 250px; text-align: left;">Total Hari Kerja</th>
+        <td style="width: 10px; ">:</td>
+        <td>' . $data['total_hari_kerja'] . ' hari</td>
+      </tr>
+      <tr>
+        <th style="width: 250px; text-align: left;" colspan="3">Penghasilan :</th>
+      </tr>
+      <tr>
         <td style="width: 250px; ">Gaji Pokok</td>
         <td style="width: 10px; ">:</td>
         <td>Rp.' . number_format($data['gaji']) . '</td>
@@ -1677,14 +1763,40 @@ if (isset($_SESSION["project_penggajian_pegawai"]["users"])) {
         <td>:</td>
         <td>Rp.' . number_format($data_rgt['upah_tunjangan']) . '</td>
       </tr>';
-        $total_tunjangan += $data_rgt['upah_tunjangan'];
       }
     }
-    $jumlah = $total_tunjangan + $data['gaji'];
     $html .= '<tr>
         <th style="width: 250px; ">Jumlah</th>
         <th style="width: 10px; ">:</th>
-        <th style="text-align: left;">Rp.' . number_format($jumlah) . '</th>
+        <th style="text-align: left;">Rp.' . number_format($data['jumlah_bruto']) . '</th>
+      </tr></tbody>
+    </table>';
+    $html .= '<table style="border-collapse: collapse; width: 100%; margin: auto;">
+    <tbody>
+    <tr>
+      <th style="width: 250px;text-align: left;" colspan="3">Potongan :</th>
+    </tr>';
+    $rekap_gaji_potongan = "SELECT * FROM rekap_gaji_potongan JOIN potongan_pegawai ON rekap_gaji_potongan.id_potongan=potongan_pegawai.id_potongan WHERE rekap_gaji_potongan.id_rekap_gaji='$id_rekap_gaji'";
+    $views_rekap_gaji_potongan = mysqli_query($conn, $rekap_gaji_potongan);
+    $total_potongan = 0;
+    if (mysqli_num_rows($views_rekap_gaji_potongan) > 0) {
+      while ($data_rgp = mysqli_fetch_assoc($views_rekap_gaji_potongan)) {
+        $html .= '<tr>
+      <td>' . $data_rgp['nama_potongan'] . '</td>
+      <td>:</td>
+      <td>Rp.' . number_format($data_rgp['upah_potongan']) . '</td>
+    </tr>';
+      }
+    }
+    $html .= '<tr>
+        <th style="width: 250px; ">Jumlah</th>
+        <th style="width: 10px; ">:</th>
+        <th style="text-align: left;">Rp.' . number_format($data['jumlah_potongan']) . '</th>
+      </tr>
+      <tr>
+        <th style="width: 250px; ">Jumlah yang Dibayarkan</th>
+        <th style="width: 10px; ">:</th>
+        <th style="text-align: left;">Rp.' . number_format($data['jumlah_dibayarkan']) . '</th>
       </tr></tbody>
     </table>';
     $html .= '<div style="width: 300px; margin-top: 20px; float: right; text-align: right;">
@@ -1703,6 +1815,24 @@ if (isset($_SESSION["project_penggajian_pegawai"]["users"])) {
       exportRekapGajiToPDF($conn, $id_rekap_gaji);
     }
 
+    return mysqli_affected_rows($conn);
+  }
+
+  function potongan_pegawai($conn, $data, $action)
+  {
+    if ($action == "insert") {
+      $sql = "INSERT INTO potongan_pegawai(nama_potongan,upah_potongan) VALUES('$data[nama_potongan]','$data[upah_potongan]')";
+    }
+
+    if ($action == "update") {
+      $sql = "UPDATE potongan_pegawai SET nama_potongan='$data[nama_potongan]', upah_potongan='$data[upah_potongan]' WHERE id_potongan='$data[id_potongan]'";
+    }
+
+    if ($action == "delete") {
+      $sql = "DELETE FROM potongan_pegawai WHERE id_potongan='$data[id_potongan]'";
+    }
+
+    mysqli_query($conn, $sql);
     return mysqli_affected_rows($conn);
   }
 

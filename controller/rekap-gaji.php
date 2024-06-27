@@ -11,10 +11,16 @@ $pegawai = "SELECT *
 $views_pegawai = mysqli_query($conn, $pegawai);
 $tunj = "SELECT * FROM tunjangan_pegawai";
 $count_tunj = mysqli_query($conn, $tunj);
+$potongan = "SELECT * FROM potongan_pegawai";
+$count_potongan = mysqli_query($conn, $potongan);
 $tunjangan_pegawai = "SELECT * FROM tunjangan_pegawai";
 $views_tunjangan_pegawai = mysqli_query($conn, $tunjangan_pegawai);
+$potongan_pegawai = "SELECT * FROM potongan_pegawai";
+$views_potongan_pegawai = mysqli_query($conn, $potongan_pegawai);
 $tunjangan_pegawai_insert = "SELECT * FROM tunjangan_pegawai";
 $views_tunjangan_pegawai_insert = mysqli_query($conn, $tunjangan_pegawai_insert);
+$potongan_pegawai_insert = "SELECT * FROM potongan_pegawai";
+$views_potongan_pegawai_insert = mysqli_query($conn, $potongan_pegawai_insert);
 $rekap_gaji = "SELECT rekap_gaji.*, pegawai.nama, pegawai.nip, pangkat_pegawai.nama_pangkat, jabatan_pegawai.nama_jabatan 
   FROM rekap_gaji 
   JOIN pegawai ON rekap_gaji.id_pegawai=pegawai.id_pegawai

@@ -23,19 +23,30 @@ require_once("../templates/views_top.php"); ?>
               <th class="text-center" rowspan="2">NIP</th>
               <th class="text-center" rowspan="2">Golongan</th>
               <th class="text-center" rowspan="2">Jabatan</th>
-              <th class="text-center" rowspan="2">Gaji</th>
-              <th class="text-center" colspan="<?= mysqli_num_rows($count_tunj) ?>">Tunjangan</th>
+              <th class="text-center" rowspan="2">Total Absensi</th>
+              <th class="text-center" rowspan="2">Jumlah Hari Kerja</th>
+              <th class="text-center" colspan="<?= mysqli_num_rows($count_tunj) + 2; ?>">Penghasilan</th>
+              <th class="text-center" colspan="<?= mysqli_num_rows($count_potongan) + 1; ?>">Potongan</th>
+              <th class="text-center" rowspan="2">Jumlah Yang Dibayarkan</th>
               <th class="text-center" rowspan="2">Tgl rekap</th>
               <?php if ($id_role <= 2) { ?>
                 <th class="text-center" rowspan="2" style="width: 200px;">Aksi</th>
               <?php } ?>
             </tr>
             <tr>
+              <th class="text-center">Gaji Pokok</th>
               <?php if (mysqli_num_rows($views_tunjangan_pegawai) > 0) {
                 while ($data_tunj = mysqli_fetch_assoc($views_tunjangan_pegawai)) { ?>
                   <th class="text-center"><?= $data_tunj['nama_tunjangan'] ?></th>
               <?php }
               } ?>
+              <th class="text-center">Jumlah Bruto</th>
+              <?php if (mysqli_num_rows($views_potongan_pegawai) > 0) {
+                while ($data_tunj = mysqli_fetch_assoc($views_potongan_pegawai)) { ?>
+                  <th class="text-center"><?= $data_tunj['nama_potongan'] ?></th>
+              <?php }
+              } ?>
+              <th class="text-center">Jumlah Potongan</th>
             </tr>
           </thead>
           <tbody>
@@ -45,6 +56,12 @@ require_once("../templates/views_top.php"); ?>
                 <td><?= $data['nip'] ?></td>
                 <td><?= $data['nama_pangkat'] ?></td>
                 <td><?= $data['nama_jabatan'] ?></td>
+                <td><?= $data['total_absensi'] ?> <br>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: <?= $data['presentasi_absensi'] ?>%;" aria-valuenow="<?= $data['presentasi_absensi'] ?>" aria-valuemin="0" aria-valuemax="100"><?= $data['presentasi_absensi'] ?>%</div>
+                  </div>
+                </td>
+                <td><?= $data['total_hari_kerja'] ?></td>
                 <td>Rp.<?= number_format($data['gaji']) ?></td>
                 <?php $id_rekap_gaji = $data['id_rekap_gaji'];
                 $rekap_gaji_tunj = "SELECT * FROM rekap_gaji_tunj JOIN tunjangan_pegawai ON rekap_gaji_tunj.id_tunjangan=tunjangan_pegawai.id_tunjangan WHERE rekap_gaji_tunj.id_rekap_gaji='$id_rekap_gaji'";
@@ -54,6 +71,16 @@ require_once("../templates/views_top.php"); ?>
                     <td>Rp.<?= number_format($data_rgt['upah_tunjangan']) ?></td>
                 <?php }
                 } ?>
+                <td>Rp.<?= number_format($data['jumlah_bruto']) ?></td>
+                <?php $rekap_gaji_potongan = "SELECT * FROM rekap_gaji_potongan WHERE id_rekap_gaji='$id_rekap_gaji'";
+                $views_rekap_gaji_potongan = mysqli_query($conn, $rekap_gaji_potongan);
+                if (mysqli_num_rows($views_rekap_gaji_potongan) > 0) {
+                  while ($data_rgp = mysqli_fetch_assoc($views_rekap_gaji_potongan)) { ?>
+                    <td>Rp.<?= number_format($data_rgp['upah_dipotong']) ?></td>
+                <?php }
+                } ?>
+                <td>Rp.<?= number_format($data['jumlah_potongan']) ?></td>
+                <td>Rp.<?= number_format($data['jumlah_dibayarkan']) ?></td>
                 <td><?php $created_at = date_create($data["created_at"]);
                     echo date_format($created_at, "d M Y h:i a"); ?></td>
                 <?php if ($id_role <= 2) { ?>
@@ -125,7 +152,17 @@ require_once("../templates/views_top.php"); ?>
                     <div class="form-group">
                       <label for="id_tunjangan"><?= $data_tunj['nama_tunjangan'] ?></label>
                       <input type="hidden" name="id_tunjangan[]" value="<?= $data_tunj['id_tunjangan'] ?>" required>
-                      <input type="number" value="<?= $data_tunj['upah_tunjangan'] ?>" class="form-control" id="id_tunjangan" required readonly>
+                      <input type="number" name="upah_tunjangan[]" value="<?= $data_tunj['upah_tunjangan'] ?>" class="form-control" id="id_tunjangan" required>
+                    </div>
+                  <?php }
+                }
+
+                if (mysqli_num_rows($views_potongan_pegawai_insert) > 0) {
+                  while ($data_tunj = mysqli_fetch_assoc($views_potongan_pegawai_insert)) { ?>
+                    <div class="form-group">
+                      <label for="id_potongan"><?= $data_tunj['nama_potongan'] ?></label>
+                      <input type="hidden" name="id_potongan[]" value="<?= $data_tunj['id_potongan'] ?>" required>
+                      <input type="number" name="upah_potongan[]" value="<?= $data_tunj['upah_potongan'] ?>" class="form-control" id="id_potongan" required>
                     </div>
                 <?php }
                 } ?>

@@ -387,3 +387,6 @@
 [2024-06-23 21:26:48] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 38
 [2024-06-23 21:27:39] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 38
 [2024-06-23 21:27:39] Error [8]: Undefined variable: id_rekap_gaji in E:\laragon\www\apps\tugas\penggajian_pegawai\views\cetak-gaji.php on line 38
+[2024-06-27 04:29:14] Error [8]: Undefined variable: views_potongan_pegawai_insert in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 141
+[2024-06-27 04:48:42] Error [2]: number_format() expects parameter 1 to be float, string given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 73
+[2024-06-27 04:48:42] Error [2]: number_format() expects parameter 1 to be float, string given in E:\laragon\www\apps\tugas\penggajian_pegawai\views\rekap-gaji.php on line 81
