@@ -1286,42 +1286,42 @@ if (isset($_SESSION["project_penggajian_pegawai"]["users"])) {
     return mysqli_affected_rows($conn);
   }
 
-  function radius_absen($conn, $data, $action)
-  {
-    if ($action == "insert") {
-      $sql = "INSERT INTO radius_absen(radius,latitude,longitude) VALUES('$data[radius]','$data[latitude]','$data[longitude]')";
-    }
+  // function radius_absen($conn, $data, $action)
+  // {
+  //   if ($action == "insert") {
+  //     $sql = "INSERT INTO radius_absen(radius,latitude,longitude) VALUES('$data[radius]','$data[latitude]','$data[longitude]')";
+  //   }
 
-    if ($action == "update") {
-      $sql = "UPDATE radius_absen SET radius='$data[radius]', latitude='$data[latitude]', longitude='$data[longitude]' WHERE id_radius='$data[id_radius]'";
-    }
+  //   if ($action == "update") {
+  //     $sql = "UPDATE radius_absen SET radius='$data[radius]', latitude='$data[latitude]', longitude='$data[longitude]' WHERE id_radius='$data[id_radius]'";
+  //   }
 
-    mysqli_query($conn, $sql);
-    return mysqli_affected_rows($conn);
-  }
+  //   mysqli_query($conn, $sql);
+  //   return mysqli_affected_rows($conn);
+  // }
 
-  function getOfficeRadius($conn)
-  {
-    $sql = "SELECT radius, latitude, longitude FROM radius_absen WHERE id_radius = 1";
-    $result = mysqli_query($conn, $sql);
-    return mysqli_fetch_assoc($result);
-  }
+  // function getOfficeRadius($conn)
+  // {
+  //   $sql = "SELECT radius, latitude, longitude FROM radius_absen WHERE id_radius = 1";
+  //   $result = mysqli_query($conn, $sql);
+  //   return mysqli_fetch_assoc($result);
+  // }
 
-  function haversine($lat1, $lon1, $lat2, $lon2)
-  {
-    $earthRadius = 6371000;
-    $dLat = deg2rad($lat2 - $lat1);
-    $dLon = deg2rad($lon2 - $lon1);
-    $a = sin($dLat / 2) * sin($dLat / 2) + cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * sin($dLon / 2) * sin($dLon / 2);
-    $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
-    return $earthRadius * $c;
-  }
+  // function haversine($lat1, $lon1, $lat2, $lon2)
+  // {
+  //   $earthRadius = 6371000;
+  //   $dLat = deg2rad($lat2 - $lat1);
+  //   $dLon = deg2rad($lon2 - $lon1);
+  //   $a = sin($dLat / 2) * sin($dLat / 2) + cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * sin($dLon / 2) * sin($dLon / 2);
+  //   $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
+  //   return $earthRadius * $c;
+  // }
 
-  function checkLocation($latitude, $longitude, $officeLatitude, $officeLongitude, $radius)
-  {
-    $distance = haversine($latitude, $longitude, $officeLatitude, $officeLongitude);
-    return $distance <= $radius;
-  }
+  // function checkLocation($latitude, $longitude, $officeLatitude, $officeLongitude, $radius)
+  // {
+  //   $distance = haversine($latitude, $longitude, $officeLatitude, $officeLongitude);
+  //   return $distance <= $radius;
+  // }
 
   function getOfficeHours($conn)
   {
@@ -1349,20 +1349,20 @@ if (isset($_SESSION["project_penggajian_pegawai"]["users"])) {
   function absensi($conn, $data, $latitude, $longitude, $action)
   {
     if ($action == "insert") {
-      $officeRadius = getOfficeRadius($conn);
-      // $radius = $officeRadius['radius'];
-      $radius = "500"; // testing loc
-      // $officeLatitude = $officeRadius['latitude'];
-      $officeLatitude = "-10.1727953"; // testing loc
-      // $officeLongitude = $officeRadius['longitude'];
-      $officeLongitude = "123.6083928"; // testing loc
-      $isInRange = checkLocation($latitude, $longitude, $officeLatitude, $officeLongitude, $radius);
-      if (!$isInRange) {
-        $message = "Gagal absen: Anda berada di luar jangkauan radius kantor.";
-        $message_type = "danger";
-        alert($message, $message_type);
-        return false;
-      }
+      // $officeRadius = getOfficeRadius($conn);
+      // // $radius = $officeRadius['radius'];
+      // $radius = "500"; // testing loc
+      // // $officeLatitude = $officeRadius['latitude'];
+      // $officeLatitude = "-10.1727953"; // testing loc
+      // // $officeLongitude = $officeRadius['longitude'];
+      // $officeLongitude = "123.6083928"; // testing loc
+      // $isInRange = checkLocation($latitude, $longitude, $officeLatitude, $officeLongitude, $radius);
+      // if (!$isInRange) {
+      //   $message = "Gagal absen: Anda berada di luar jangkauan radius kantor.";
+      //   $message_type = "danger";
+      //   alert($message, $message_type);
+      //   return false;
+      // }
       $officeHours = getOfficeHours($conn);
       $statusAbsensi = checkAttendanceStatus($data, $officeHours);
       $sql = "INSERT INTO absensi(id_pegawai, waktu_masuk, waktu_pulang, status_absensi) VALUES('$data[id_pegawai]', '$data[waktu_masuk]', '$data[waktu_pulang]', '$statusAbsensi')";
